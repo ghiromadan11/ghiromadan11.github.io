@@ -352,6 +352,53 @@ h2{
     color:#0ea5e9;
 }
 
+/* ================= BUTTON PRO STYLE ================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+    background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
+}
+
+/* Click Effect */
+.btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Optional Glow Animation */
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.btn:hover::after {
+    left: 125%;
+}
 /* ================= EDUCATION SECTION (PRO CLEAN) ================= */
 
 .education-section {
@@ -616,7 +663,7 @@ h2{
         </p>
 
         <div class="hero-buttons">
-            <a href="file:///D:/BERKAS%20LAMARAN/cv%20irgi%20(BBL).pdf" 
+            <a href="cv-irgi-(BBL).pdf" 
                class="btn-primary" 
                target="_blank">
                Unduh CV
@@ -803,7 +850,7 @@ h2{
         Data Mining • Decision Tree (ID3) • RapidMiner • Business Intelligence
     </div>
 
-    <a href="file:///D:/UNIVERSITAS%20BINA%20SARANA%20INFORMATIKA/PROSES%20SEMESTER%20VI/Data%20warehouse%20bisnis/Referensi%20Tugas/yang%20dipakai/ANALISIS%20DATA%20TOYOTA%20SUKABUMI_FINAL.pdf" 
+    <a href="ANALISIS_DATA_TOYOTA _SUKABUMI_FINAL.pdf" 
        class="btn" 
        target="_blank">
         Lihat / Unduh Jurnal
