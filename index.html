@@ -77,8 +77,21 @@ h2{
     z-index: 2;
 }
 
-.hero-text {
-    flex: 1;
+.hero-text p {
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.hero-text p {
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .hero-badge {
@@ -206,8 +219,14 @@ h2{
     color: #334155;
     line-height: 1.7;
     font-size: 15px;
+    text-align: justify;
+    hyphens: auto;
 }
-
+@media (max-width: 768px) {
+    .about-text {
+        padding: 0 5px;
+    }
+}
 .about-highlight {
     display: flex;
     justify-content: center;
@@ -575,6 +594,20 @@ h2{
     box-shadow:0 10px 25px rgba(0,0,0,0.05);
     transition:0.3s ease;
 }
+/* ================= PROJECT TEXT ALIGN FIX ================= */
+
+.project-card h3{
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.project-card p{
+    text-align: justify;
+    line-height: 1.8;
+    hyphens: auto;
+    margin-bottom: 15px;
+}
 
 .project-card:hover{
     transform:translateY(-5px);
@@ -914,7 +947,7 @@ h2{
         <i class="fab fa-linkedin"></i>
         <div>
             <h4>LinkedIn</h4>
-            <p>linkedin.com/in/irgihikmahromadan</p>
+            <p>irgi hikmah romadan</p>
         </div>
     </a>
 

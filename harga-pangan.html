@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detail Proyek - Dashboard Harga Pangan</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 *{
     margin:0;
@@ -14,113 +12,130 @@
     box-sizing:border-box;
     font-family:'Inter',sans-serif;
 }
-
 body{
-    background:#f1f5f9;
+    background:#f8fafc;
     color:#1e293b;
     line-height:1.8;
 }
 
+/* CONTAINER */
 .container{
     width:90%;
     max-width:950px;
     margin:auto;
 }
 
+/* SECTIONS */
 section{
     padding:70px 0;
+    border-radius:12px;
+    margin-bottom:40px;
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
+/* HEADINGS */
 h1{
-    font-size:34px;
-    margin-bottom:15px;
+    font-size:36px;
+    margin-bottom:20px;
     color:#1e3a8a;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
-
 h2{
-    margin:40px 0 15px 0;
-    font-size:22px;
+    margin:35px 0 15px 0;
+    font-size:24px;
     color:#0f172a;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+h1::before, h2::before{
+    content:"🔹";
 }
 
+/* PARAGRAPH & LIST */
 p{
-    margin-bottom:15px;
+    margin-bottom:18px;
     color:#475569;
+    text-align: justify;
+    hyphens: auto;
 }
-
 ul{
-    padding-left:20px;
+    padding-left:25px;
     color:#475569;
 }
-
 li{
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
-/* Back Button */
+/* BACK BUTTON */
 .back-btn{
     display:inline-block;
     margin-bottom:35px;
-    padding:10px 22px;
-    background:#0ea5e9;
+    padding:12px 25px;
+    background: linear-gradient(90deg,#0ea5e9,#0284c7);
     color:white;
-    border-radius:8px;
+    border-radius:10px;
     text-decoration:none;
-    font-weight:500;
+    font-weight:600;
     transition:0.3s;
 }
-
 .back-btn:hover{
-    background:#0284c7;
+    background: linear-gradient(90deg,#0284c7,#0ea5e9);
+    transform: scale(1.05);
 }
 
-/* Info Box */
+/* INFO BOX */
 .info-box{
-    background:white;
-    padding:25px;
-    border-radius:14px;
+    background:#ffffff;
+    padding:30px 25px;
+    border-radius:16px;
     margin:25px 0 35px 0;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    box-shadow:0 12px 28px rgba(0,0,0,0.06);
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
 }
-
 .info-item strong{
     display:block;
-    font-size:14px;
+    font-size:15px;
     color:#64748b;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
-
 .info-item span{
     font-weight:600;
     color:#1e293b;
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery{
     margin-top:20px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
-
 .gallery img{
     width:100%;
-    height:210px;
+    height:220px;
     object-fit:cover;
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    transition:0.3s ease;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s ease;
     cursor:pointer;
 }
-
 .gallery img:hover{
-    transform:scale(1.04);
+    transform: scale(1.06);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
-/* Modal */
+/* MODAL */
 .modal{
     display:none;
     position:fixed;
@@ -132,40 +147,39 @@ li{
     height:100%;
     background-color:rgba(0,0,0,0.85);
 }
-
 .modal-content{
     display:block;
     margin:auto;
     max-width:80%;
     max-height:80vh;
-    border-radius:12px;
-    animation:zoom 0.3s ease;
+    border-radius:14px;
+    animation:zoom 0.4s ease;
 }
-
 @keyframes zoom{
     from{transform:scale(0.7);}
     to{transform:scale(1);}
 }
-
 .close{
     position:absolute;
     top:30px;
     right:40px;
     color:#fff;
-    font-size:35px;
+    font-size:38px;
     font-weight:bold;
     cursor:pointer;
+    transition:0.3s;
+}
+.close:hover{
+    color:#f87171;
 }
 </style>
 </head>
-
 <body>
 
+<!-- SECTION: HEADER -->
 <section>
 <div class="container">
-
 <a href="index.html" class="back-btn">← Kembali ke Portofolio</a>
-
 <h1>Dashboard Pemantauan Harga Pangan (Early Warning System)</h1>
 
 <div class="info-box">
@@ -173,26 +187,29 @@ li{
         <strong>Peran</strong>
         <span>Fullstack Web Developer</span>
     </div>
-
     <div class="info-item">
         <strong>Teknologi</strong>
         <span>CodeIgniter 4, Chart.js, AJAX, MySQL</span>
     </div>
-
     <div class="info-item">
         <strong>Tahun</strong>
         <span>2025</span>
     </div>
 </div>
+</div>
+</section>
 
+<!-- SECTION: DESKRIPSI -->
+<section>
+<div class="container">
 <h2>Deskripsi Proyek</h2>
-<p>
-Sistem ini merupakan Early Warning System berbasis web 
-yang digunakan untuk memantau harga komoditas pangan secara real-time.
-Dashboard menampilkan grafik interaktif dan riwayat harga 
-berdasarkan wilayah dan tanggal input.
-</p>
+<p>Sistem ini merupakan Early Warning System berbasis web yang digunakan untuk memantau harga komoditas pangan secara real-time. Dashboard menampilkan grafik interaktif dan riwayat harga berdasarkan wilayah dan tanggal input.</p>
+</div>
+</section>
 
+<!-- SECTION: FITUR UTAMA -->
+<section>
+<div class="container">
 <h2>Fitur Utama</h2>
 <ul>
 <li>Input dan update harga komoditas</li>
@@ -201,7 +218,12 @@ berdasarkan wilayah dan tanggal input.
 <li>Dashboard admin, Kepala, dan user</li>
 <li>Popup grafik interaktif menggunakan Chart.js</li>
 </ul>
+</div>
+</section>
 
+<!-- SECTION: TANGGUNG JAWAB -->
+<section>
+<div class="container">
 <h2>Tanggung Jawab Saya</h2>
 <ul>
 <li>Merancang struktur database</li>
@@ -210,16 +232,21 @@ berdasarkan wilayah dan tanggal input.
 <li>Mengintegrasikan Chart.js untuk visualisasi data</li>
 <li>Mendesain UI modern dan responsif</li>
 </ul>
+</div>
+</section>
 
+<!-- SECTION: HASIL & DAMPAK -->
+<section>
+<div class="container">
 <h2>Hasil & Dampak</h2>
-<p>
-Sistem ini membantu monitoring harga pangan menjadi lebih cepat, 
-akurat, dan informatif. Visualisasi grafik mempermudah 
-analisis tren harga untuk pengambilan keputusan.
-</p>
+<p>Sistem ini membantu monitoring harga pangan menjadi lebih cepat, akurat, dan informatif. Visualisasi grafik mempermudah analisis tren harga untuk pengambilan keputusan.</p>
+</div>
+</section>
 
+<!-- SECTION: GALLERY -->
+<section>
+<div class="container">
 <h2>Screenshot Sistem</h2>
-
 <div class="gallery">
     <img src="images/harga-pangan/dashboard_public.png" alt="Dashboard Utama">
     <img src="images/harga-pangan/diagram_harga.png" alt="Form Input Harga">
@@ -232,13 +259,10 @@ analisis tren harga untuk pengambilan keputusan.
     <img src="images/harga-pangan/unduh_data.png" alt="Grafik Harga">
     <img src="images/harga-pangan/unduh_kpl.png" alt="Grafik Harga">
 </div>
-
-<!-- IMAGE MODAL -->
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
 </div>
-
 </div>
 </section>
 
